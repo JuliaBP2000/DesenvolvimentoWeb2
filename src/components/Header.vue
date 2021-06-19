@@ -1,0 +1,92 @@
+<template>
+    <v-container>
+       <header>
+            <nav class="nav-bar">             
+                <div class="nav-container">   
+                    <ul class="nav-list " id="nav">
+                        <li> <a onclick="carregaCategoria('Masculino')" href="#" id="title1"> Masculino</a></li>
+                        <li> <a onclick="carregaCategoria('Feminino')" href="#" id="title2"> Feminino</a></li>
+                        <li> <a onclick="carregaCategoria('Acessorio')" href="#" id="title3"> Acessórios</a></li>
+                        <li> <a href="#" id="title4"> Login </a></li>
+                        <li> <a href="/car" id="title5"> <img href="#" class="shopcar" src="../img/shopping-cart.png" title="Carrinho de compras"/> </a></li>
+                    </ul>
+                </div>
+            </nav>
+        </header>   
+    </v-container>
+</template>
+
+<style>
+/*Cabelhaço*/
+
+/*
+@media screen and (max-width: 480px) {
+    .nav-list li a:hover{
+        -webkit-filter: brightness(1.3);
+    }
+}
+
+@media screen and (min-width: 481px) and (max-width: 768px) {
+
+    .nav-list li a:hover{
+        -webkit-filter: brightness(1.3);
+    }
+}
+  */
+
+.nav-container {
+    background: url(../img/background.png); 
+    overflow: hidden;
+    display: flex;
+}
+  
+.nav-menu {
+    display: none;
+}
+    
+nav.nav-bar ul {
+    list-style: none;  
+}
+  
+.nav-list {
+    display: flex;
+    flex-grow: 1;
+}
+  
+.nav-list li {
+    float: left;
+    padding: 3px;
+    margin:4px;
+}
+
+.nav-list img{
+    width: 35px;
+    height: 35px;   
+}
+  
+.nav-list li a {
+    color: #f9f9f9;
+    text-shadow: 1px 1px 3px rgba(150, 150, 150, 1);
+    padding: 10px 10px;
+    font-size: 1.5em;
+    text-align: center;
+    text-decoration: none;
+}
+  
+.nav-list li:nth-of-type(1){
+    margin-left: auto;
+}
+
+.nav-list li:nth-of-type(4){
+    margin-left: auto;
+}
+
+.nav-list li a:hover{
+    -webkit-filter: brightness(1.3);
+    padding-top: 15px ;
+}
+  
+#title1, #title2, #title3, #title4 {
+    background: url(../img/background.png);
+}
+</style>
