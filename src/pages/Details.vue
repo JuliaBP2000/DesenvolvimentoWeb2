@@ -1,0 +1,43 @@
+<template>
+  <main>
+       <Product 
+            :title="firebaseData.name" 
+            :img="firebaseData.images[0]"
+            :price="firebaseData.new_price"
+            :obj="firebaseData"
+        />
+        {{firebaseData}}
+    </main>
+</template>
+
+<script>
+import Product from '../components/Product.vue';
+import { db } from '../firebase';
+
+export default {
+  name: 'Details',
+  components: {
+    Product,
+  },
+
+  data(){
+    return {
+      firebaseData: null,
+      idProduto: '1'
+    }; 
+  },
+  firestore(){
+    db.collection('produtos').where('id', '==', this.idProduto).get()
+      .then(querySnapshot => querySnapshot.forEach(doc => {
+        this.firebaseData = doc.data()
+      }))
+  },
+
+  methods: {
+  }
+};
+</script>
+
+<style>
+
+</style>
