@@ -1,12 +1,8 @@
 <template>
   <main>
        <Product 
-            :title="firebaseData.name" 
-            :img="firebaseData.images[0]"
-            :price="firebaseData.new_price"
-            :obj="firebaseData"
+            v-if="firebaseData" :obj="firebaseData"
         />
-        {{firebaseData}}
     </main>
 </template>
 
@@ -23,7 +19,7 @@ export default {
   data(){
     return {
       firebaseData: null,
-      idProduto: '1'
+      idProduto: '9'
     }; 
   },
   firestore(){
