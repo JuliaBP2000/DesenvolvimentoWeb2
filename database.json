@@ -1,0 +1,200 @@
+[
+    {
+        "id": "1",
+        "name": "Tênis Nike Revolution 5 Masculino",
+        "images": [
+            "../img/nike.jpg",
+            "../img/nike1.jpg",
+            "../img/nike2.jpg",
+            "../img/nike3.jpg",
+            "../img/nike4.jpg",
+            "../img/nike5.jpg"
+        ],
+        "old_price": 500.00,
+        "new_price": 250.50,
+        "stock": 10,
+        "about": "Com ótimo amortecimento em espuma, o Tênis Nike Masculino Revolution 5 é ideal para os corredores que buscam leveza e conforto. Confeccionado em material respirável, esse tênis para correr possui reforço no calcanhar para proteger contra possíveis torções e fechamento dinâmico, garantindo um ajuste personalizado. Aposte na Nike para te acompanhar nos seus desafios dentro do esporte!",
+        "categories": {
+            "cor": "Preto",
+            "material": "Mesh",
+            "gênero": "Masculino",
+            "marca": "Nike"
+        },
+        "categoria": "Masculino",
+        "sizes": ["39", "40", "41", "42"]
+    },
+    {
+        "id": "2",
+        "name": "Camiseta Own The Run",
+        "images": [
+            "../img/adidas1.jpg",
+            "../img/adidas2.jpg",
+            "../img/adidas3.jpg",
+            "../img/adidas4.jpg"
+        ],
+        "old_price": 119.99,
+        "new_price": 100.00,
+        "stock": 3,
+        "about": "A vida está ficando cada vez mais estressante e complicada. Alguns dias você não sente que tem tempo ou energia para correr. Simplifique as coisas com esta camiseta adidas Own the Run. Ela é macia, confortável e de secagem rápida. Além disso, é feita com materiais reciclados, parte do compromisso da adidas de criar um futuro mais sustentável. Assim, você pode se orgulhar da camiseta que veste enquanto vence os quilômetros.",
+        "categories": {
+            "cor": "Vermelha",
+            "material": "Primegreen",
+            "gênero": "Feminino",
+            "marca": "Adidas"
+        },
+        "categoria": "Feminino",
+        "sizes": ["PP", "P", "M", "G"]
+    },
+    {
+        "id": "3",
+        "name": "BONÉ COURT SIDE PRINTED",
+        "images": [
+            "../img/vans-bone1.jpg",
+            "../img/vans-bone2.jpg",
+            "../img/vans-bone3.jpg"
+        ],
+        "old_price": 200.00,
+        "new_price": 179.99,
+        "stock": 15,
+        "about": "O boné Vans Court Side Printed Hat é feito de 100% poliéster e forro da viseira 100% algodão, todo em tie-dye. Possui bordado do logo da Vans.",
+        "categories": {
+            "cor": "Estampado",
+            "material": "Poliéster",
+            "gênero": "Feminino",
+            "marca": "Vans"
+        },
+        "categoria": "Acessorio",
+        "sizes": ["P", "M"]
+    },
+    {
+        "id": "4",
+        "name": "TÊNIS PUMA SUEDE CLASSIC CINZA",
+        "images": [
+            "../img/puma1.jpg",
+            "../img/puma2.jpg",
+            "../img/puma3.jpg"
+        ],
+        "old_price": 349.90,
+        "new_price": 244.93,
+        "stock": 30,
+        "about": "Tênis Puma Suede Classic Cinza foi um calçado que transcendeu as barreiras da moda ao ser imortalizados por dois corredores -  Tommie Smith e John Carlos – nas Olimpíadas de 68 no México, onde os dois atletas colocaram o Suede ao lado do pódio e fizeram o gesto do movimento Black Power - um protesto contra a segregação racial nos Estados Unidos - gesto que marcou a vida desses atletas e também a cultura sneaker, isso porque, logo depois, esse modelo passou a ser usado por um dos grandes astros da NBA - Walt 'Clyde' Frazier e virou xodó do movimento street e dos b-boys na década de 80. ",
+        "categories": {
+            "cor": "Cinza",
+            "material": "Solado de borracha, Logo Puma no calcanhar em dourado, Material interno em textil macio e confortavel",
+            "gênero": "Masculino",
+            "marca": "Puma"
+        },
+        "categoria": "Masculino",
+        "sizes": ["35", "36", "37", "38", "39", "40", "41", "42", "43"]
+    },
+    {
+        "id": "5",
+        "name": "Staple x Threadbeast Lace Script Hoodie",
+        "images": [
+            "../img/staple1.jpg",
+            "../img/staple2.jpg",
+            "../img/staple3.jpg"
+        ],
+        "old_price": 400.00,
+        "new_price": 380.99,
+        "stock": 2,
+        "about": "Moletom com capuz loopback com bordado direto no peito, capuz ajustável com cordão e bolso canguru.",
+        "categories": {
+            "cor": "Camuflagem Vermelha",
+            "material": "100% Algodão",
+            "gênero": "Masculino",
+            "marca": "Staple"
+        },
+        "categoria": "Masculino",
+        "sizes": ["M", "L", "XL", "2XL", "3XL"]
+    },
+    {
+        "id": "6",
+        "name": "CARTEIRA OBEY VANDAL JUMBLE BI-FOLD PRETO",
+        "images": [
+            "../img/obey1.jpg",
+            "../img/obey2.jpg",
+            "../img/obey3.jpg"
+        ],
+        "old_price": 299.90,
+        "new_price": 209.93,
+        "stock": 50,
+        "about": "A Carteira Obey Vandal Jumble Bi Fold possui vários titulares de cartão, um bolso para inserir notas e o logotipo interno OBEY em relevo.",
+        "categories": {
+            "cor": "Preta",
+            "material": "Fabricado com couro 100% genuíno.",
+            "gênero": "Masculino",
+            "marca": "Obey"
+        },
+        "categoria": "Acessorio",
+        "sizes": ["UNI"]
+    },
+    {
+        "id": "7",
+        "name": "TÊNIS ADIDAS NMD_R1 PRETO",
+        "images": [
+            "../img/tenis-adidas1.jpg",
+            "../img/tenis-adidas2.jpg"
+        ],
+        "old_price": 700.00,
+        "new_price": 349.95,
+        "stock": 25,
+        "about": "Otimizado e moderno, este Tênis Adidas NMD_R1 combina o estilo de corrida dos anos 80 com elementos de estilo da moda outdoor. O cabedal de malha envolve os pés e é sustentado por uma midsole responsiva e amortecida. Possui tecnologia Boost, o amortecimento mais responsivo da Adidas. Detalhes como os puxadores no calcanhar e o EVA na sola trazem o visual NOMAD RUNNER a tona. Com o acabamento técnico com as Três Listras soldadas e o solado bege, o sneaker está preparado para os mais duros desafios do cotidiano.",
+        "categories": {
+            "cor": "Preto e Bege",
+            "material": "Solado de borracha",
+            "gênero": "Feminino",
+            "marca": "Adidas"
+        },
+        "categoria": "Feminino",
+        "sizes": ["36", "37", "38"]
+    },
+    {
+        "id": "8",
+        "name": "BOLSA NEW ERA SHOULDER BAG NEW YORK YANKEES CINZA/VERDE",
+        "images": [
+            "../img/newera1.jpg",
+            "../img/newera2.jpg",
+            "../img/newera3.jpg",
+            "../img/newera4.jpg",
+            "../img/newera5.jpg"
+        ],
+        "old_price": 149.99,
+        "new_price": 104.99,
+        "stock": 5,
+        "about": "Shoulder Bag com padronagem militar, bolso frontal e logo neon do New York Yankees frontal.",
+        "categories": {
+            "cor": "Cinza/Verde",
+            "material": "100% Poliéster",
+            "bolsos": 3,
+            "gênero": "Feminino",
+            "marca": "New Era"
+        },
+        "categoria": "Acessorio",
+        "sizes": ["UNI"]
+    },
+    {
+        "id": "9",
+        "name": "VESTIDO RB MODA CAMISÃO MANGA LONGA MOLETINHO PRETO",
+        "images": [
+            "../img/rbmoda1.jpg",
+            "../img/rbmoda2.jpg",
+            "../img/rbmoda3.jpg",
+            "../img/rbmoda4.jpg"
+        ],
+        "old_price": 100.45,
+        "new_price": 81.75,
+        "stock": 15,
+        "about": "Vestido Camisão de manga longa perfeito para o frio, procurando algo elegante e de estilo para usar na noite? Esse lindo vestido de manga longa é perfeito, com tecido moletinho bem quentinho, acabamento e qualidade perfeito.",
+        "categories": {
+            "cor": "Preto",
+            "material": "Moletom",
+            "Manga": "Longa",
+            "Comprimento": "Curto",
+            "gênero": "Feminino",
+            "marca": "RB Moda"
+        },
+        "categoria": "Feminino",
+        "sizes": ["P", "M", "G", "GG"]
+    }
+]
