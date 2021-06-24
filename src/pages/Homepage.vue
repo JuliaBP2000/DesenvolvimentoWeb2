@@ -8,8 +8,7 @@
 </template>
 
 <script>
-import HelloWorld from './pages/car.vue';
-
+import HelloWorld from './components/carrosseul.vue';
 import firebase from 'firebase';
 
 firebase.initializeApp({
@@ -19,7 +18,7 @@ firebase.initializeApp({
 });
 
 export default {
-  name: 'App',
+  name: 'Homepage',
   
   components: {
     HelloWorld,
@@ -30,3 +29,4 @@ export default {
   }),
 };
 </script>
+
