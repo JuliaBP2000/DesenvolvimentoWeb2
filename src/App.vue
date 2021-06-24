@@ -45,7 +45,7 @@
 </template>
 
 <script>
-import HelloWorld from './components/carrosseul.vue';
+import HelloWorld from './pages/car.vue';
 
 import firebase from 'firebase';
 
