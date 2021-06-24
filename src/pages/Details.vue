@@ -1,5 +1,6 @@
 <template>
   <main>
+      <Header />
        <Product 
             v-if="firebaseData" :obj="firebaseData"
         />
@@ -7,6 +8,8 @@
 </template>
 
 <script>
+import Header from '../components/Header.vue';
+
 import Product from '../components/Product.vue';
 import { db } from '../firebase';
 
@@ -14,6 +17,7 @@ export default {
   name: 'Details',
   components: {
     Product,
+    Header,
   },
 
   data(){
