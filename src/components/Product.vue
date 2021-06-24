@@ -27,13 +27,13 @@
                 </v-card-text>
                 <span id="subtitle">Tamanhos:</span>
                 <div id="tamanhos" v-for="(value, name) in obj.sizes" :key="name">
-                    <input name="size" type="radio" :id="value" :value="1">
+                    <input name="size" type="radio" :id="value" :value="value" v-model="size" >
                     <label :for="value"> {{value}}</label>
                 </div>
                 <label for="qtd" id="subtitle">Quantidade: </label>
-                <input id="qtd" type="number" min=1 >
+                <input id="qtd" type="number" min=1 value="1" v-model="qtd" >
                 <br>
-                <v-btn v-on:click="buy">Comprar</v-btn>
+                <v-btn v-on:click="compraProduto">Comprar</v-btn>
             </div>
         </v-card>
     </v-app>
@@ -85,6 +85,21 @@
         width: 50px;
         background-color: white;
         border-radius: 5px;
+        padding: 5px;
+    }
+    @media screen and (max-width: 1300px) {
+        #card-container {
+            grid-template-columns: 1fr;
+        }
+        #app {
+            width: 75%;
+            margin: 0 auto;
+        }
+    }
+    @media screen and (max-width: 800px) {
+        #app {
+            width: 95%;
+        }
     }
 </style>
 <script>
@@ -94,14 +109,27 @@ export default {
         obj: {
             type: Object,
             required: true
+        },
+    },
+    data: function() {
+        return {
+            carrinho: {},
+            size: this.obj.sizes[0],
+            qtd: 1,
         }
     },
-    carrinho: [],
-    size: '',
-    qtd: 1,
     methods: {
-        buy(){
-            this.carrinho({id:this.obj.id, size:this.size, qtd:this.qtd});
+         compraProduto(){
+            this.carrinho = {id:this.obj.id, size:this.size, qtd:this.qtd};
+            if (localStorage.getItem("carrinho") === null) {
+                localStorage.setItem('carrinho', JSON.stringify([]));
+            }
+            let carrinho = localStorage.getItem('carrinho');
+            let listaProdutos = JSON.parse(carrinho);
+            listaProdutos.push(this.carrinho);
+            localStorage.setItem('carrinho', JSON.stringify(listaProdutos));
+            console.log(localStorage.getItem('carrinho'));
+            this.$router.push('/carrinho');
         }
     }
 }
