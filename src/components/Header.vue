@@ -12,7 +12,7 @@
                     
                 </ul>
                 <ul class="nav-list">
-                    <li v-if="isLogged"><a @click="signout">Logout</a></li>
+                    <li v-if="isLogged"><a @click="signout()">Logout</a></li>
                     <li v-else><a href="/login">Login</a></li>
                     <li> <a href="/carrinho"><img href="#" class="shopcar" src="../img/shopping-cart.png" title="Carrinho de compras"/></a></li>
                 </ul>
@@ -34,7 +34,7 @@ export default {
   },
   methods: {
       signout(){
-        localStorage.setItem('isLogged', false);
+        localStorage.setItem('isLogged', true)
         this.isLogged = localStorage.getItem('isLogged')
       }
   }
