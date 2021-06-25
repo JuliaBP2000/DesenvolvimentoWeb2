@@ -1,15 +1,17 @@
-import App from './App.vue';
+import Homepage from './pages/Homepage.vue'
 import Details from './pages/Details.vue';
 import Car from './pages/car.vue';
 import BuyPage from './pages/buyPage.vue';
 import Login from './pages/login.vue';
 import Cadastro from './pages/paginaDeCadastro.vue'
+import PaginaMasculino from './pages/PaginaMasculino.vue'
+
 
 export default [
     {
         path: '/',
-        name: 'App',
-        component: App
+        name: 'Homepage',
+        component: Homepage
     },
     {
         path: '/login',
@@ -35,5 +37,10 @@ export default [
         path: '/buyPage',
         name: 'Bought',
         component: BuyPage
-    }
+    },
+    {
+        path: '/masculino',
+        name: 'Masculino',
+        component: PaginaMasculino
+    },
 ]
