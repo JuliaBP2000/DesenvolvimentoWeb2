@@ -27,9 +27,6 @@ export default {
     Product,
     Header
   },
-created(){
-  localStorage.setItem('isLogged', false);
-},
 
 data(){
     return {
