@@ -49,6 +49,9 @@ export default {
         cadastrar(){
             firebase.auth().createUserWithEmailAndPassword(this.email, this.senha)
             .then((userCredential) => console.log(userCredential));
+
+            localStorage.setItem('isLogged', true)
+
             this.$router.push('/')
         }
     }

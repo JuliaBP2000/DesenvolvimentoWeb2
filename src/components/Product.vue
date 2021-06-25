@@ -60,7 +60,7 @@ export default {
     },
     methods: {
          compraProduto(){
-            this.carrinho = {id:this.obj.id, size:this.size, qtd:this.qtd};
+            this.carrinho = {id:this.obj.id,name:this.obj.name, size:this.size, qtd:this.qtd, images: this.obj.images, price: this.obj.new_price};
             if (localStorage.getItem("carrinho") === null) {
                 localStorage.setItem('carrinho', JSON.stringify([]));
             }
