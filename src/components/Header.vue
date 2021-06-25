@@ -11,7 +11,7 @@
                     <li><a href="/acessorios">Acessórios</a></li>
                 </ul>
                 <ul class="nav-list">
-                    <li v-if="isLogged"><a @click="signout()">Logout</a></li>
+                    <li v-if="isLogged"><v-btn text @click="signout()">Logout</v-btn></li>
                     <li v-else><a href="/login">Login</a></li>
                     <li> <a href="/carrinho"><img href="#" class="shopcar" src="../img/shopping-cart.png" title="Carrinho de compras"/></a></li>
                 </ul>
@@ -28,13 +28,13 @@ export default {
 
     data(){
     return {
-      isLogged: localStorage.getItem('isLogged'),
+      isLogged: localStorage.getItem('isLogged') === 'true',
     }; 
   },
   methods: {
       signout(){
-        localStorage.setItem('isLogged', true)
-        this.isLogged = localStorage.getItem('isLogged')
+        localStorage.setItem('isLogged', false)
+        this.isLogged = false;
       }
   }
 }
