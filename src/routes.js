@@ -5,6 +5,8 @@ import BuyPage from './pages/buyPage.vue';
 import Login from './pages/login.vue';
 import Cadastro from './pages/paginaDeCadastro.vue'
 import PaginaMasculino from './pages/PaginaMasculino.vue'
+import PaginaFeminino from './pages/PaginaFeminino.vue'
+import PaginaAcessorio from './pages/PaginaAcessorio.vue'
 
 
 export default [
@@ -42,5 +44,15 @@ export default [
         path: '/masculino',
         name: 'Masculino',
         component: PaginaMasculino
+    },
+    {
+        path: '/feminino',
+        name: 'Feminino',
+        component: PaginaFeminino
+    },
+    {
+        path: '/acessorio',
+        name: 'Acessorio',
+        component: PaginaAcessorio
     },
 ]
