@@ -1,5 +1,5 @@
 <template>
-    <v-container fluid class="background letraTexto">
+    <v-container fluid class="letraTexto">
         <v-row align="space-between" justify="center">
             <v-col cols="5" align-self="center">
                 <v-card>
