@@ -19,6 +19,7 @@
                     <v-row justify="center">
                         <v-col cols="9">
                         <v-text-field
+                        type="password"
                         v-model="senha"
                         label="Password"
                         required />
