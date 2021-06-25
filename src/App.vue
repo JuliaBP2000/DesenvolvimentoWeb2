@@ -1,13 +1,21 @@
 <template>
   <v-app>
     <v-main>
+      <v-row justify="center">
+      <v-col cols="8">
+         <v-row dense justify="center">
+           <v-col cols="4" v-for="(index, i) in 10" :key="i"> 
       <HelloWorld/>
+       </v-col>
+    </v-row>
+      </v-col>
+      </v-row>
     </v-main>
   </v-app>
 </template>
 
 <script>
-import HelloWorld from './pages/car.vue';
+import HelloWorld from './components/CardProduto.vue';
 
 import firebase from 'firebase';
 

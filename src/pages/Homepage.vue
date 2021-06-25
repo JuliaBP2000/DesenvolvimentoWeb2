@@ -2,7 +2,8 @@
   <v-app>
     <v-main>
       <HelloWorld :nome-mundo="mundo"/>
-      <Product />
+
+      <Product/>
     </v-main>
   </v-app>
 </template>

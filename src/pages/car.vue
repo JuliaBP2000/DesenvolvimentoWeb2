@@ -11,23 +11,23 @@
                                 <v-card-title>
                                     <v-row>
                                         <v-col cols="4">    
-                                            <v-img :src="item.images[0]"/>
+                                            <v-img v-bind:src="require(`@/img/${item.images[0].split('/')[2]}`)" height="100" width="100"/>
                                         </v-col>
                                         <v-col cols="8">
-                                            <v-list-item-title :title="item.name"/>
+                                            <v-list-item-title>{{item.name}}</v-list-item-title>
                                         </v-col>
                                     </v-row>
                                 </v-card-title>
                                 <v-card-text>
                                     <v-row>
                                         <v-col cols="4">
-                                            <span :v-text="item.stock"/>
+                                            <p> {{item.stock}}</p>
                                         </v-col>
                                         <v-col cols="4">
-                                            <span :v-text="item.new_price"/>
+                                            <p>{{item.new_price}}</p>
                                         </v-col>
                                         <v-col cols="4">
-                                            <span :v-text="item.size"/>
+                                            <p>{{item.size}}</p>
                                         </v-col>
                                     </v-row>
                                 </v-card-text>
@@ -65,11 +65,11 @@ export default {
                         id: "8",
                         name: "BOLSA NEW ERA SHOULDER BAG NEW YORK YANKEES CINZA/VERDE",
                         images: [
-                            "./img/newera1.jpg",
-                            "./img/newera2.jpg",
-                            "./img/newera3.jpg",
-                            "./img/newera4.jpg",
-                            "./img/newera5.jpg"
+                            './img/newera1.jpg',
+                            './img/newera2.jpg',
+                            './img/newera3.jpg',
+                            './img/newera4.jpg',
+                            './img/newera5.jpg'
                         ],
                         old_price: 149.99,
                         new_price: 104.99,
@@ -84,7 +84,7 @@ export default {
                         },
                         categoria: "Acessorio",
                         sizes: ["UNI"]
-                        }                         
+                        },                                              
                     ],
             productsData: null
         }
@@ -99,7 +99,7 @@ export default {
         //for (let i = 0; i < buyListTemp.length; i++) {
         //    if(buyListTemp[i].id == this.productsData[i].id)
         //    this.buyList.push(this.productsData[i])
-//        }
+        //}
     },
     methods:{
         //passa o id do prduto que sera removido do carrinho

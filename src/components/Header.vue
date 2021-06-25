@@ -8,7 +8,7 @@
                         <li> <a onclick="carregaCategoria('Feminino')" href="#" id="title2"> Feminino</a></li>
                         <li> <a onclick="carregaCategoria('Acessorio')" href="#" id="title3"> Acessórios</a></li>
                         <li> <a href="/login" id="title4"> Login </a></li>
-                        <li> <a href="/car" id="title5"> <img href="#" class="shopcar" src="../img/shopping-cart.png" title="Carrinho de compras"/> </a></li>
+                        <li> <a href="/carrinho" id="title5"> <img href="#" class="shopcar" src="../img/shopping-cart.png" title="Carrinho de compras"/> </a></li>
                     </ul>
                 </div>
             </nav>

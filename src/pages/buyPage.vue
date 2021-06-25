@@ -30,7 +30,8 @@ export default {
 
 <style>
 .telaToda{
-    height: 100%;
+    height: 100vh;
+    align-content: space-between;
 }
 .letraTexto{
     font-family: 'Nunito', sans-serif;
