@@ -4,11 +4,13 @@
        <Product 
             v-if="firebaseData" :obj="firebaseData"
         />
+        <Footer />
     </main>
 </template>
 
 <script>
 import Header from '../components/Header.vue';
+import Footer from '../components/Footer.vue';
 import Product from '../components/Product.vue';
 import { db } from '../firebase';
 
@@ -17,6 +19,7 @@ export default {
   components: {
     Product,
     Header,
+    Footer
   },
 
   data(){

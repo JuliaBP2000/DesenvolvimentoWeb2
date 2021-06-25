@@ -9,7 +9,6 @@
                     <li><a href="/masculino">Masculino</a></li>
                     <li><a href="/feminino">Feminino</a></li>
                     <li><a href="/acessorios">Acessórios</a></li>
-                    
                 </ul>
                 <ul class="nav-list">
                     <li v-if="isLogged"><a @click="signout">Logout</a></li>
