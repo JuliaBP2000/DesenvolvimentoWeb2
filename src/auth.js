@@ -13,26 +13,22 @@ let password = '321321'
 
 /* SIGN UP */
 
-//  firebase.auth().createUserWithEmailAndPassword(email, password)
-//   .then((userCredential) => console.log(userCredential));
+firebase.auth().createUserWithEmailAndPassword(email, password)
+  .then((userCredential) => console.log(userCredential));
 
 /* SIGN IN  */
 
-// firebase.auth().signInWithEmailAndPassword(email, password)
-//   .then((userCredential) => console.log(userCredential));
-
-
-//   firebase.auth().onAuthStateChanged(function(user) {
-//     if (user) {
-//       // User is signed in.
-//     } else {
-//       // No user is signed in.
-//     }
-//   });
-
+ firebase.auth().signInWithEmailAndPassword(email, password)
+   .then((userCredential) => console.log(userCredential));
+   firebase.auth().onAuthStateChanged(function(user) {
+     if (user) {
+       // User is signed in.
+     } else {
+       // No user is signed in.
+     }
+   });
 // var user = firebase.auth().currentUser;
 // var name, email, photoUrl, uid, emailVerified;
-
 // if (user != null) {
 //   name = user.displayName;
 //   email = user.email;
@@ -42,15 +38,12 @@ let password = '321321'
 //                    // this value to authenticate with your backend server, if
 //                    // you have one. Use User.getToken() instead.
 // }
-  
 
-// firebase.auth().signOut().then(() => {
-//     // Sign-out successful.
-//   }).catch((error) => {
-//     // An error happened.
-//   });
-
-
+ firebase.auth().signOut().then(() => {
+     // Sign-out successful.
+   }).catch((error) => {
+     console.error(error)
+   });
 
 // /* AUTHENTICATION GOOGLE */
 

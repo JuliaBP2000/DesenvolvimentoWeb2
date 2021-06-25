@@ -124,8 +124,8 @@ export default {
             if (localStorage.getItem("carrinho") === null) {
                 localStorage.setItem('carrinho', JSON.stringify([]));
             }
-            let carrinho = localStorage.getItem('carrinho');
-            let listaProdutos = JSON.parse(carrinho);
+            let carrinhoTemp = localStorage.getItem('carrinho');
+            let listaProdutos = JSON.parse(carrinhoTemp);
             listaProdutos.push(this.carrinho);
             localStorage.setItem('carrinho', JSON.stringify(listaProdutos));
             console.log(localStorage.getItem('carrinho'));

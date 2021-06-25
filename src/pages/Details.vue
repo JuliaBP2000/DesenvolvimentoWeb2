@@ -9,7 +9,6 @@
 import Header from '../components/Header.vue';
 
 import Product from '../components/Product.vue';
-import Header from '../components/Header.vue';
 import { db } from '../firebase';
 
 export default {

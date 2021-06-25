@@ -1,8 +1,7 @@
 <template>
   <v-app>
     <v-main>
-      <HelloWorld :nome-mundo="mundo"/>
-      <Product />
+      <HelloWorld/>
     </v-main>
   </v-app>
 </template>
@@ -12,12 +11,13 @@ import HelloWorld from './pages/car.vue';
 
 import firebase from 'firebase';
 
-firebase.initializeApp({
-  apiKey: 'AIzaSyAmkNmm5uNQWD0weQykMhffodpQXQjBvMM',
-  authDomain: 'desenvolvimentoweb2-2d224.firebaseapp.com',
-  projectId: 'desenvolvimentoweb2-2d224'
-});
-
+if (!firebase.apps.length) {
+    firebase.initializeApp({
+      apiKey: 'AIzaSyAmkNmm5uNQWD0weQykMhffodpQXQjBvMM',
+      authDomain: 'desenvolvimentoweb2-2d224.firebaseapp.com',
+      projectId: 'desenvolvimentoweb2-2d224'
+    });
+}
 export default {
   name: 'App',
   
