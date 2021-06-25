@@ -25,19 +25,57 @@
                         </li>
                     </ul>
                 </v-card-text>
-                <span id="subtitle">Tamanhos:</span>
-                <div id="tamanhos" v-for="(value, name) in obj.sizes" :key="name">
-                    <input name="size" type="radio" :id="value" :value="value" v-model="size" >
-                    <label :for="value"> {{value}}</label>
+                <div class="tamanhos list">
+                    <span id="subtitle">Tamanhos:</span>
+                    <div id="tamanhos" v-for="(value, name) in obj.sizes" :key="name">
+                        <input name="size" type="radio" :id="value" :value="value" v-model="size" >
+                        <label :for="value"> {{value}}</label>
+                    </div>
                 </div>
-                <label for="qtd" id="subtitle">Quantidade: </label>
-                <input id="qtd" type="number" min=1 value="1" v-model="qtd" >
-                <br>
-                <v-btn v-on:click="compraProduto">Comprar</v-btn>
+                <div class="quantidade list">
+                    <label for="qtd" id="subtitle">Quantidade: </label>
+                    <input id="qtd" type="number" min=1 value="1" v-model="qtd" >
+                </div>
+                <v-btn color="success" v-on:click="compraProduto" id="comprar">Comprar</v-btn>
             </div>
         </v-card>
     </v-app>
 </template>
+
+<script>
+
+export default {
+    props: {
+        obj: {
+            type: Object,
+            required: true
+        },
+    },
+    data: function() {
+        return {
+            carrinho: {},
+            size: this.obj.sizes[0],
+            qtd: 1,
+        }
+    },
+    methods: {
+         compraProduto(){
+            this.carrinho = {id:this.obj.id, size:this.size, qtd:this.qtd};
+            if (localStorage.getItem("carrinho") === null) {
+                localStorage.setItem('carrinho', JSON.stringify([]));
+            }
+            let carrinhoTemp = localStorage.getItem('carrinho');
+            let listaProdutos = JSON.parse(carrinhoTemp);
+            listaProdutos.push(this.carrinho);
+            localStorage.setItem('carrinho', JSON.stringify(listaProdutos));
+            console.log(localStorage.getItem('carrinho'));
+            this.$router.push('/carrinho');
+        }
+    }
+}
+
+</script>
+
 <style>    
     #card-container {
         display: grid;
@@ -87,6 +125,12 @@
         border-radius: 5px;
         padding: 5px;
     }
+    .list {
+        margin: 15px 0;
+    }
+    #comprar {
+        margin: 25px 0;
+    }
     @media screen and (max-width: 1300px) {
         #card-container {
             grid-template-columns: 1fr;
@@ -102,36 +146,3 @@
         }
     }
 </style>
-<script>
-
-export default {
-    props: {
-        obj: {
-            type: Object,
-            required: true
-        },
-    },
-    data: function() {
-        return {
-            carrinho: {},
-            size: this.obj.sizes[0],
-            qtd: 1,
-        }
-    },
-    methods: {
-         compraProduto(){
-            this.carrinho = {id:this.obj.id, size:this.size, qtd:this.qtd};
-            if (localStorage.getItem("carrinho") === null) {
-                localStorage.setItem('carrinho', JSON.stringify([]));
-            }
-            let carrinhoTemp = localStorage.getItem('carrinho');
-            let listaProdutos = JSON.parse(carrinhoTemp);
-            listaProdutos.push(this.carrinho);
-            localStorage.setItem('carrinho', JSON.stringify(listaProdutos));
-            console.log(localStorage.getItem('carrinho'));
-            this.$router.push('/carrinho');
-        }
-    }
-}
-
-</script>

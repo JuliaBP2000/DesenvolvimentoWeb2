@@ -13,6 +13,6 @@
         align-items: center;
         min-height: 55px;
         background-color: #007bff;
-        color: black;
+        color: #f9f9f9;
     }
 </style>
