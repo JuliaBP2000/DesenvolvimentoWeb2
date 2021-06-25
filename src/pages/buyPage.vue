@@ -11,7 +11,7 @@
                     </v-card-text>
                     <v-card-actions class="letraTexto">
                         <v-btn plain @click="goBacktoHome()">Voltar para Página Inicial</v-btn>
-                        <v-btn href="twitterUrl = `https://twitter.com/intent/tweet?text=Acabei de comprar na loja Desenvolvimento 2">Publicar no Twitter</v-btn>
+                        <v-btn href="https://twitter.com/intent/tweet?text=Acabei de comprar na loja Desenvolvimento 2">Publicar no Twitter</v-btn>
                     </v-card-actions>               
                     </v-card>
             </v-col>
