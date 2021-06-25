@@ -4,10 +4,11 @@
             <nav class="nav-bar">             
                 <div class="nav-container">   
                     <ul class="nav-list " id="nav">
-                        <li> <a onclick="carregaCategoria('Masculino')" href="#" id="title1"> Masculino</a></li>
-                        <li> <a onclick="carregaCategoria('Feminino')" href="#" id="title2"> Feminino</a></li>
-                        <li> <a onclick="carregaCategoria('Acessorio')" href="#" id="title3"> Acessórios</a></li>
-                        <li> <a href="/login" id="title4"> Login </a></li>
+                        <li> <a href="/masculino" id="title1"> Masculino</a></li>
+                        <li> <a href="/feminino" id="title2"> Feminino</a></li>
+                        <li> <a href="/acessorios" id="title3"> Acessórios</a></li>
+                        <li v-if="isLogged===false"> <a href="/login" id="title4"> Login </a></li>
+                        <li v-else> <a @click="Signout"> Logout </a></li>
                         <li> <a href="/carrinho" id="title5"> <img href="#" class="shopcar" src="../img/shopping-cart.png" title="Carrinho de compras"/> </a></li>
                     </ul>
                 </div>
@@ -16,23 +17,23 @@
     </v-container>
 </template>
 
+<script>
+export default {
+    created(){
+        localStorage.setItem('isLogged', false);
+    },
+
+    data(){
+    return {
+      isLogged: localStorage.getItem('isLogged'),
+    }; 
+  },
+}
+
+</script>
+
 <style>
 /*Cabelhaço*/
-
-/*
-@media screen and (max-width: 480px) {
-    .nav-list li a:hover{
-        -webkit-filter: brightness(1.3);
-    }
-}
-
-@media screen and (min-width: 481px) and (max-width: 768px) {
-
-    .nav-list li a:hover{
-        -webkit-filter: brightness(1.3);
-    }
-}
-  */
 
 .nav-container {
     background: url(../img/background.png); 

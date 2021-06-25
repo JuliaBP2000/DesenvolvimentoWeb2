@@ -1,13 +1,14 @@
 <template>
   <main>
       <Header />
-      <Product v-if="firebaseData" :obj="firebaseData" />
+       <Product 
+            v-if="firebaseData" :obj="firebaseData"
+        />
     </main>
 </template>
 
 <script>
 import Header from '../components/Header.vue';
-
 import Product from '../components/Product.vue';
 import { db } from '../firebase';
 
@@ -15,7 +16,7 @@ export default {
   name: 'Details',
   components: {
     Product,
-    Header
+    Header,
   },
 
   data(){
@@ -24,6 +25,7 @@ export default {
       idProduto: this.$route.params.id,
     }; 
   },
+
   firestore(){
     db.collection('produtos').where('id', '==', this.idProduto).get()
       .then(querySnapshot => querySnapshot.forEach(doc => {
@@ -34,6 +36,7 @@ export default {
   methods: {
   }
 };
+
 </script>
 
 <style>

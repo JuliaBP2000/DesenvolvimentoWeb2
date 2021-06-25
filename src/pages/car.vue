@@ -101,6 +101,7 @@ export default {
         //    this.buyList.push(this.productsData[i])
         //}
     },
+    
     methods:{
         //passa o id do prduto que sera removido do carrinho
         removeProductFromCar(id){

@@ -35,7 +35,7 @@ data(){
   },
   
   firestore(){
-    db.collection('produtos').get()
+    db.collection('produtos').where("categoria", "==", "Masculino").get()
       .then(querySnapshot => querySnapshot.forEach(doc => {
         this.firebaseData.push(doc.data());  
       }))
@@ -43,4 +43,3 @@ data(){
 };
 
 </script>
-
